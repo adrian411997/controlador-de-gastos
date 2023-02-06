@@ -1,0 +1,35 @@
+/*--------------------------------------------------------------
+# General 
+--------------------------------------------------------------*/
+header {
+  padding: 10px 0px;
+  width: 100%;
+}
+header:hover {
+  background-color: rgb(69, 160, 223);
+  transition: 0.5s;
+}
+header {
+  display: flex;
+}
+
+/*--------------------------------------------------------------
+# Icon
+--------------------------------------------------------------*/
+header > div {
+  padding-left: 20px;
+  width: 50%;
+}
+/*--------------------------------------------------------------
+# Header > actions
+--------------------------------------------------------------*/
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+}
+.actions img {
+  cursor: pointer;
+}
