@@ -1,5 +1,98 @@
 .content-container {
   width: 100%;
-  background-color: aqua;
   padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title-desc {
+  display: flex;
+  width: 75%;
+}
+.close-button {
+  width: 25%;
+}
+.trash {
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.title-desc > li {
+  width: 50%;
+}
+.list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.list-desc {
+  width: 50%;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px;
+}
+.input-list-gastos {
+  width: 80%;
+  text-align: center;
+  background-color: white;
+  border-radius: 0.5em;
+  padding: 20px 0px;
+}
+.addItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addItemButton {
+  margin-left: 20px;
+}
+.addItemButton button {
+  background-color: greenyellow;
+  border: none;
+  cursor: pointer;
+}
+input {
+  padding: 10px;
+  border: none;
+  margin: 0px 10px;
+  background-color: rgb(243, 243, 243);
+  border-radius: 0.5em;
+}
+select {
+  margin: 10px 0px;
+  padding: 10px;
+  border: none;
+  background-color: rgb(243, 243, 243);
+  border-radius: 0.5em;
+}
+input:focus {
+  outline: none;
+}
+::placeholder {
+  color: #858383;
+  font-size: 1.1em;
+  font-style: italic;
+}
+li {
+  list-style: none;
+}
+.money::before {
+  content: "";
+  display: inline-block;
+  height: 10px;
+  width: 1em;
+  background-image: url("../../images/money.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
