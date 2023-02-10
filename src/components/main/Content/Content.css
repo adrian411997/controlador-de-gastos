@@ -1,5 +1,352 @@
 .content-container {
   width: 100%;
-  background-color: aqua;
   padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.list-gastos {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title-desc {
+  display: flex;
+  width: 75%;
+}
+.close-button {
+  width: 25%;
+}
+.trash {
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.title-desc > li {
+  width: 50%;
+}
+.list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.list-desc {
+  width: 50%;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px;
+}
+.input-list-gastos {
+  width: 80%;
+  text-align: center;
+  background-color: white;
+  border-radius: 0.5em;
+  padding: 20px 0px;
+}
+.addItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addItemButton {
+  margin-left: 20px;
+}
+.addItemButton button {
+  background-color: greenyellow;
+  border: none;
+  cursor: pointer;
+}
+input {
+  padding: 10px;
+  border: none;
+  margin: 0px 10px;
+  background-color: rgb(243, 243, 243);
+  border-radius: 0.5em;
+}
+select {
+  margin: 10px 0px;
+  padding: 10px;
+  border: none;
+  background-color: rgb(243, 243, 243);
+  border-radius: 0.5em;
+}
+input:focus {
+  outline: none;
+}
+::placeholder {
+  color: #858383;
+  font-size: 1.1em;
+  font-style: italic;
+}
+li {
+  list-style: none;
+}
+.money::before {
+  content: "";
+  display: inline-block;
+  height: 10px;
+  width: 1em;
+  background-image: url("../../images/money.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/*--------------------------------------------------------------
+# Content2
+--------------------------------------------------------------*/
+.content2-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+/*--------------------------------------------------------------
+# Lateral bar
+--------------------------------------------------------------*/
+.lateral-bar-content {
+  width: 10%;
+  background-color: rgb(40, 123, 255);
+  height: 100%;
+}
+.title-lateral-bar {
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+.list-lateral-bar {
+  padding: 10px;
+}
+.list-lateral-bar > ul > li {
+  margin: 10px 0px;
+}
+/*--------------------------------------------------------------
+# Central screen
+--------------------------------------------------------------*/
+.central-screen-content {
+  width: 90%;
+  height: 100vh;
+}
+.fichas {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ficha-content {
+  display: flex;
+
+  width: 90%;
+  justify-content: space-between;
+}
+.ficha-content > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0px;
+  border-radius: 0.5em;
+  width: 20%;
+  background-color: white;
+  height: 150px;
+}
+.ficha {
+  display: flex;
+  flex-direction: column;
+}
+.central-table-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.filters {
+  width: 90%;
+}
+.addButton {
+  padding: 10px 20px;
+  border-radius: 0.5em;
+  margin-left: 30px;
+  background-color: rgb(40, 167, 69);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.addButton:hover {
+  background-color: white;
+  border: 1px solid rgb(40, 167, 69);
+  color: rgb(40, 167, 69);
+  transition: 0.2s ease-in-out;
+}
+.search {
+  margin: 0px 30px;
+}
+.table {
+  background-color: white;
+  height: 600px;
+  width: 70%;
+  border-radius: 0.5em;
+  border: none;
+}
+.central-left {
+  background-color: white;
+  height: 600px;
+  width: 27%;
+  border-radius: 0.5em;
+}
+.table-content {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0px;
+}
+.title-table {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.list-gastos2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.title-gastos-property {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 0px;
+}
+.gastos {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+
+.gasto-name {
+  width: 40%;
+}
+.gasto-mount {
+  width: 20%;
+}
+.type {
+  width: 20%;
+}
+.day {
+  width: 10%;
+}
+.actions {
+  width: 10%;
+}
+.gasto-mount > p::before {
+  content: "$";
+}
+.modal {
+  position: fixed;
+  display: none;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 1;
+}
+.show {
+  display: block;
+}
+.modal-content {
+  position: absolute; /* Relativo con respecto al contenedor -modal- */
+  background-color: white;
+  margin: auto; /* Centrada */
+  width: 40%;
+  left: 30%;
+  top: 50px;
+  -webkit-animation-name: animarsuperior;
+  -webkit-animation-duration: 0.5s;
+  animation-name: animarsuperior;
+  animation-duration: 0.5s;
+  border-radius: 0.5em;
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes animarsuperior {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 50px;
+    opacity: 1;
+  }
+}
+.modal-close {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid grey;
+  padding: 20px 10px;
+}
+.modal-close span {
+  font-size: 20px;
+  cursor: pointer;
+}
+.modal-body {
+  padding: 20px 20px;
+  border-bottom: 1px solid black;
+}
+.modal-body > div > input {
+  margin: 10px 0px;
+  width: 80%;
+}
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+  padding: 10px 0px;
+}
+.cancelar {
+  background-color: rgb(208, 42, 58);
+}
+.cancelar:hover {
+  color: rgb(208, 42, 58);
+  border: 1px solid rgb(208, 42, 58);
+  background-color: white;
+}
+.central-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.grafico-title {
+  margin: 30px 0px;
+}
+.grafico {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
