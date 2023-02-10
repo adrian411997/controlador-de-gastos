@@ -10,6 +10,7 @@ import {
   restart,
 } from "../../Redux/Reducers/Todolist";
 import { Pie } from "react-chartjs-2";
+import dashboard from "../../images/dashboard.png";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -145,12 +146,10 @@ const Content2 = () => {
       <div className="lateral-bar-content">
         <div className="title-lateral-bar">My bills</div>
         <div className="list-lateral-bar">
-          <ul>
-            <li>Dashboard</li>
-            <li>Anotaciones</li>
-            <li></li>
-            <li></li>
-          </ul>
+          <div className="items-lateral-bar active-item">
+            <img src={dashboard} alt="dashboard" width={30} height={30} />
+            <p>Dashboard</p>
+          </div>
         </div>
       </div>
       <div className="central-screen-content">

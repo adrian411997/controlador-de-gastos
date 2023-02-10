@@ -130,6 +130,17 @@ li {
 .list-lateral-bar > ul > li {
   margin: 10px 0px;
 }
+.items-lateral-bar {
+  display: flex;
+}
+.items-lateral-bar p {
+  margin-left: 10px;
+}
+.active-item {
+  background-color: white;
+  padding: 10px 10px;
+  border-radius: 0.5em;
+}
 /*--------------------------------------------------------------
 # Central screen
 --------------------------------------------------------------*/
@@ -349,4 +360,140 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.grafico canvas {
+  width: 35 0px !important;
+  height: 350px !important;
+}
+/*--------------------------------------------------------------
+# Responsive-design
+--------------------------------------------------------------*/
+@media (max-width: 1281px) {
+  .items-lateral-bar img {
+    width: 25px;
+    height: 25px;
+  }
+  .items-lateral-bar p {
+    font-size: 12px;
+    margin-left: 5px;
+  }
+  .items-lateral-bar {
+    align-items: center;
+  }
+  .grafico-title {
+    text-align: center;
+  }
+}
+@media (max-width: 1025px) {
+  .items-lateral-bar p {
+    display: none;
+  }
+  .items-lateral-bar {
+    align-items: center;
+    justify-content: center;
+  }
+  .ficha-content > div {
+    height: 100px;
+  }
+  .ficha {
+    text-align: center;
+  }
+  .ficha h1 {
+    font-size: 20px;
+  }
+  .table {
+    height: auto;
+  }
+  .table-content {
+    padding: 0px 0px;
+  }
+  .central-left {
+    height: auto;
+  }
+  .grafico-title {
+    margin: 15px 0px;
+  }
+  .grafico-title h3 {
+    font-size: 15px;
+  }
+  .grafico {
+    padding: 10px 0px;
+  }
+  .grafico canvas {
+    width: 200px !important;
+    height: 200px !important;
+  }
+}
+@media (max-width: 913px) {
+  .table-content {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+  }
+  .table,
+  .central-left {
+    margin: 10px 0px;
+    width: 100%;
+  }
+  .gasto-name {
+    width: 25%;
+  }
+  .actions p {
+    font-size: 10px;
+  }
+}
+@media (max-width: 420px) {
+  .content2-container {
+    flex-direction: column;
+  }
+  .lateral-bar-content {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+  }
+  .title-lateral-bar {
+    border-right: 1px solid black;
+  }
+  .items-lateral-bar {
+    width: 100%;
+    border-radius: 50%;
+  }
+  .filters {
+    display: flex;
+    flex-direction: column;
+  }
+  .active-item {
+    padding: 5px;
+  }
+  .search {
+    margin: 0px;
+  }
+  .central-screen-content {
+    width: 100%;
+  }
+  .ficha-content {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .ficha-content > div {
+    width: 40%;
+    margin: 10px 10px;
+  }
+  .table-content {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+  }
+  .table,
+  .central-left {
+    margin: 10px 0px;
+    width: 100%;
+  }
+  .gasto-name {
+    width: 25%;
+  }
+  .actions p {
+    font-size: 10px;
+  }
 }
