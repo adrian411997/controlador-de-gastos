@@ -1,12 +1,11 @@
 import React from "react";
 import Header from "../header/Header";
-import Content from "./Content/Content";
+import Content2 from "./Content/Content2";
 
 const Main = () => {
   return (
     <>
-      <Header />
-      <Content />
+      <Content2 />
     </>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { gastos } from "../../Redux/Reducers/Todolist";
+import { Mygastos } from "../../Redux/Reducers/Todolist";
+import Card from "../elements/Card";
 import "./Content.css";
 
 const Content = () => {
@@ -20,7 +21,9 @@ const Content = () => {
 
   //Variables
   const dispatch = useDispatch();
-  let store = useSelector(gastos);
+  let store = useSelector(Mygastos);
+  console.log(store);
+  console.log(store[0].monto);
   let meses = [
     "Enero",
     "Febrero",
@@ -63,12 +66,12 @@ const Content = () => {
       prevState.filter((pr) => pr.nombre !== nombre)
     );
   };
+
   //Renderizado
   useEffect(() => {
     getDays();
   }, [indicador]);
 
-  console.log(gastoIndividual);
   return (
     <>
       <div className="content-container">
@@ -77,8 +80,8 @@ const Content = () => {
             {store.length === 0 ? (
               <h1>No tiene seguimiento de gastos. Por favor cree uno.</h1>
             ) : (
-              store.map((index, g) => {
-                return <div>{g.name}</div>;
+              store.map((g, index) => {
+                return <Card index={index} mes={g.mes} cant={g.monto} />;
               })
             )}
           </div>

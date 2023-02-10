@@ -1,0 +1,20 @@
+.card {
+  width: 33%;
+  border: none;
+  border-radius: 0.5em;
+  background-color: grey;
+  height: 300px;
+  margin: 0px 10px;
+}
+.content-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.content-card p {
+  padding: 10px 0px;
+}
